@@ -15,6 +15,7 @@
   const tweenedA = tweened(0);
   const tweenedB = tweened(0);
   $: tweenedA.set(percentA);
+  $: demo=`${$tweenedA}`
   $: tweenedB.set(percentB);
   $: console.log($tweenedA, $tweenedB);
 
@@ -47,6 +48,7 @@
 <Card>
   <div class="poll">
     <h3>{ poll.question }</h3>
+    Demo {demo}
     <p>Total votes: { totalVotes }</p>
     <div class="answer" on:click={() => handleVote('a', poll.id)}>
       <div class="percent percent-a" style="width: {$tweenedA}%"></div>

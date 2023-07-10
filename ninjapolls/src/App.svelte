@@ -4,7 +4,7 @@
 	import CreatePollForm from './components/CreatePollForm.svelte';
 	import PollList from './components/PollList.svelte';
   import Tabs from './shared/Tabs.svelte';
-  
+  export  let name;
   // tabs
   let items = ['Current Polls', 'Add New Poll'];
   let activeItem = 'Current Polls';
@@ -18,6 +18,7 @@
 
 <Header />
 <main>
+{name}
   <Tabs {activeItem} {items} on:tabChange={tabChange} />
   {#if activeItem === 'Current Polls'}
     <PollList />

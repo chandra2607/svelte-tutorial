@@ -4,7 +4,8 @@
 
 <style>
   .card{
-    background: #fff;
+    background:black;
+    color:red;
     padding: 20px;
     border-radius: 6px;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
